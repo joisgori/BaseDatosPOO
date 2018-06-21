@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * En esta clase se definen los nombres de las columnas a las que se harán consultas de la base de datos.
+ * Para el caso hay una llave primaria id que se irá autoincrementando, y luego están el resto de columnas visuales.
  */
 package modelo;
 
@@ -16,6 +15,8 @@ public class Filtro {
     private int stock;
     private boolean existencia;
 
+    //Se crean los constructores, vacíos o con parámetros que permitirán la inicialización del programa con ciertos valores predeterminados...
+    
     public Filtro() {
     }
 
@@ -40,6 +41,7 @@ public class Filtro {
         this.existencia = existencia;
     }
 
+    //Se definen todos los métodos getter...
     public int getId() {
         return id;
     }
@@ -60,6 +62,7 @@ public class Filtro {
         return existencia;
     }
 
+    //Se definen todos los métodos setter...
     public void setId(int id) {
         this.id = id;
     }

@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * .prepareStatement(“SQL”) -> Enviamos una consulta como la siguiente:
+ * DELETE FROM filtros_aceite WHERE codFiltro=?, donde “?” es el valor que parametrizaremos o en otra palabras preparamos la consulta.
+ * hacemos un delete de la tabla "filtros_aceite" de la base de datos "filtros".
  */
 package dao;
 
@@ -16,14 +16,15 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import modelo.Filtro;
-import sun.util.logging.PlatformLogger;
+//import sun.util.logging.PlatformLogger;
 
 /**
  *
  * @author LN710Q
  */
 public class FiltroDao implements metodos<Filtro> {
-
+    
+    //Se declaran las siguientes constantes para poder hacer las consultas en la base de datos.
     private static final String SQL_INSERT = "INSERT INTO filtros_aceite (CodFiltro, marca, stock, existencia) VALUES(?,?,?,?)";
     private static final String SQL_UPDATE = "UPDATE filtros_aceite SET marca = ?, stock = ?, existencia = ? WHERE CodFiltro = ?";
     private static final String SQL_DELETE = "DELETE FROM filtros_aceite WHERE codFiltro = ?";
